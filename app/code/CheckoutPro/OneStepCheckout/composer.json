@@ -1,0 +1,17 @@
+{
+  "name": "checkoutpro/module-one-step-checkout",
+  "description": "One-Step Checkout Pro for Magento 2",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "CheckoutPro\\OneStepCheckout\\": ""
+    }
+  }
+}

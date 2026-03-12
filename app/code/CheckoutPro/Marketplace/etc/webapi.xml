@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/marketplace/vendors/:vendorId" method="GET">
+        <service class="CheckoutPro\Marketplace\Api\VendorRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/marketplace/vendors" method="POST">
+        <service class="CheckoutPro\Marketplace\Api\VendorRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/marketplace/commission/calculate" method="POST">
+        <service class="CheckoutPro\Marketplace\Api\CommissionManagementInterface" method="calculate"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/marketplace/payout/request" method="POST">
+        <service class="CheckoutPro\Marketplace\Api\PayoutManagementInterface" method="requestPayout"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+</routes>

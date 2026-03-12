@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="CheckoutPro_Marketplace::marketplace" title="Marketplace" module="CheckoutPro_Marketplace" sortOrder="90" resource="CheckoutPro_Marketplace::marketplace"/>
+        <add id="CheckoutPro_Marketplace::vendors" title="Vendors" module="CheckoutPro_Marketplace" sortOrder="10" parent="CheckoutPro_Marketplace::marketplace" resource="CheckoutPro_Marketplace::vendors"/>
+        <add id="CheckoutPro_Marketplace::payouts" title="Payouts" module="CheckoutPro_Marketplace" sortOrder="20" parent="CheckoutPro_Marketplace::marketplace" resource="CheckoutPro_Marketplace::payouts"/>
+        <add id="CheckoutPro_Marketplace::disputes" title="Disputes" module="CheckoutPro_Marketplace" sortOrder="30" parent="CheckoutPro_Marketplace::marketplace" resource="CheckoutPro_Marketplace::disputes"/>
+    </menu>
+</config>

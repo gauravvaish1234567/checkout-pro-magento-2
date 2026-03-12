@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<acl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <resources>
+        <resource id="Magento_Backend::admin">
+            <resource id="CheckoutPro_Marketplace::marketplace" title="Marketplace" sortOrder="90">
+                <resource id="CheckoutPro_Marketplace::vendors" title="Vendors"/>
+                <resource id="CheckoutPro_Marketplace::payouts" title="Payouts"/>
+                <resource id="CheckoutPro_Marketplace::disputes" title="Disputes"/>
+                <resource id="CheckoutPro_Marketplace::settings" title="Settings"/>
+            </resource>
+        </resource>
+    </resources>
+</acl>

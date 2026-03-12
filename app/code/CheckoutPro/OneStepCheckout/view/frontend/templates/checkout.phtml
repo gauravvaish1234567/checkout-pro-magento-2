@@ -1,11 +1,15 @@
 <?php
 /** @var \CheckoutPro\OneStepCheckout\Block\Checkout $block */
+$checkoutConfig = $block->getSerializedCheckoutConfig();
 ?>
 <?php if (!$block->isEnabled()): ?>
     <div class="message info">
         <span><?= $block->escapeHtml(__('One-Step Checkout Pro is disabled in configuration.')) ?></span>
     </div>
 <?php else: ?>
+    <script>
+        window.checkoutConfig = <?= /* @noEscape */ $checkoutConfig ?>;
+    </script>
     <script type="text/x-magento-init">
     {
         "#checkoutpro-one-step-checkout": {
@@ -14,7 +18,7 @@
                     "checkoutproOneStepCheckout": {
                         "component": "CheckoutPro_OneStepCheckout/js/view/onestep-checkout",
                         "config": {
-                            "checkoutConfig": <?= /* @noEscape */ $block->getSerializedCheckoutConfig() ?>
+                            "checkoutConfig": <?= /* @noEscape */ $checkoutConfig ?>
                         }
                     }
                 }

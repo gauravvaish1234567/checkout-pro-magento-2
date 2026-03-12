@@ -1,9 +1,8 @@
 define([
     'uiComponent',
     'ko',
-    'Magento_Checkout/js/model/quote',
     'Magento_Customer/js/model/customer'
-], function (Component, ko, quote, customer) {
+], function (Component, ko, customer) {
     'use strict';
 
     return Component.extend({
@@ -11,13 +10,21 @@ define([
             template: 'CheckoutPro_OneStepCheckout/onestep-checkout'
         },
 
-        quote: quote,
+        initialize: function () {
+            this._super();
+            this.checkoutConfig = this.config.checkoutConfig || {};
+
+            return this;
+        },
+
         customer: customer,
 
         isCustomerLoggedIn: customer.isLoggedIn,
+
         cartItemsCount: ko.pureComputed(function () {
-            var items = quote.getItems() || [];
-            return items.length;
-        })
+            var quoteItems = (this.checkoutConfig && this.checkoutConfig.quoteItemData) || [];
+
+            return quoteItems.length;
+        }, this)
     });
 });

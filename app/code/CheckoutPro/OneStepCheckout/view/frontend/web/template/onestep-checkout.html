@@ -1,0 +1,16 @@
+<div class="checkoutpro-one-step-checkout">
+    <h1 data-bind="i18n: 'One-Step Checkout Pro'"></h1>
+
+    <div class="checkoutpro-one-step-checkout__meta">
+        <p>
+            <strong data-bind="i18n: 'Customer status:'"></strong>
+            <span data-bind="text: isCustomerLoggedIn() ? 'Logged in' : 'Guest'"></span>
+        </p>
+        <p>
+            <strong data-bind="i18n: 'Items in cart:'"></strong>
+            <span data-bind="text: cartItemsCount()"></span>
+        </p>
+    </div>
+
+    <p data-bind="i18n: 'This page is ready for integrating shipping, payment, and place-order flow in one step.'"></p>
+</div>

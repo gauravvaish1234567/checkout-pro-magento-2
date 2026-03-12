@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <checkoutpro_marketplace>
+            <general>
+                <enabled>1</enabled>
+                <auto_approve_vendor>0</auto_approve_vendor>
+            </general>
+            <commission>
+                <global_rate>10</global_rate>
+            </commission>
+        </checkoutpro_marketplace>
+    </default>
+</config>

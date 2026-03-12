@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="checkoutpro_marketplace" translate="label" sortOrder="500" showInDefault="1" showInWebsite="1" showInStore="0">
+            <label>CheckoutPro Marketplace</label>
+            <tab>sales</tab>
+            <resource>CheckoutPro_Marketplace::settings</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>General</label>
+                <field id="enabled" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable Marketplace</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="auto_approve_vendor" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Auto Approve Vendors</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="commission" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Commission</label>
+                <field id="global_rate" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Global Commission Rate (%)</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="category_rate_map" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Category Commission Map (category_id:rate, one per line)</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

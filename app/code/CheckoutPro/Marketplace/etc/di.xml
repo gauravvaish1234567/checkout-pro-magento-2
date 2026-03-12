@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="CheckoutPro\Marketplace\Api\VendorRepositoryInterface" type="CheckoutPro\Marketplace\Model\VendorRepository"/>
+    <preference for="CheckoutPro\Marketplace\Api\CommissionManagementInterface" type="CheckoutPro\Marketplace\Model\Commission\CommissionManagement"/>
+    <preference for="CheckoutPro\Marketplace\Api\PayoutManagementInterface" type="CheckoutPro\Marketplace\Model\PayoutManagement"/>
+
+    <type name="Magento\Sales\Model\ResourceModel\Order\Grid\Collection">
+        <plugin name="checkoutpro_marketplace_filter_vendor_orders" type="CheckoutPro\Marketplace\Plugin\FilterVendorOrderCollection" sortOrder="10"/>
+    </type>
+</config>

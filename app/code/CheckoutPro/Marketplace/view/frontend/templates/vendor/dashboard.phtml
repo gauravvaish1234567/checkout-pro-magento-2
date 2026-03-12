@@ -1,0 +1,29 @@
+<?php /** @var \CheckoutPro\Marketplace\Block\Vendor\Dashboard $block */ ?>
+<div class="cp-marketplace-dashboard">
+    <h1><?= $block->escapeHtml(__('Vendor Dashboard')) ?></h1>
+    <div class="dashboard-grid">
+        <section>
+            <h2><?= $block->escapeHtml(__('Operations')) ?></h2>
+            <ul>
+                <li><?= $block->escapeHtml(__('Manage Products & Stock')) ?></li>
+                <li><?= $block->escapeHtml(__('Vendor Shipping Rates')) ?></li>
+                <li><?= $block->escapeHtml(__('Order Fulfillment')) ?></li>
+            </ul>
+        </section>
+        <section>
+            <h2><?= $block->escapeHtml(__('Payout History')) ?></h2>
+            <table>
+                <thead><tr><th><?= $block->escapeHtml(__('Date')) ?></th><th><?= $block->escapeHtml(__('Amount')) ?></th><th><?= $block->escapeHtml(__('Status')) ?></th></tr></thead>
+                <tbody>
+                <?php foreach ($block->getRecentPayouts() as $payout): ?>
+                    <tr>
+                        <td><?= $block->escapeHtml($payout->getData('created_at')) ?></td>
+                        <td><?= $block->escapeHtml($payout->getData('amount')) ?></td>
+                        <td><?= $block->escapeHtml($payout->getData('status')) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>

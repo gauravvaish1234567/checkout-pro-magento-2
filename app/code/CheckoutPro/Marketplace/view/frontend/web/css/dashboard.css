@@ -1,0 +1,8 @@
+.cp-marketplace-dashboard .dashboard-grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); }
+.cp-marketplace-dashboard section { border:1px solid #dcdcdc; border-radius:8px; padding:16px; background:#fff; }
+.cp-marketplace-dashboard table { width:100%; border-collapse:collapse; }
+.cp-marketplace-dashboard th, .cp-marketplace-dashboard td { border-bottom:1px solid #ececec; padding:8px; text-align:left; }
+@media (max-width: 767px) {
+  .cp-marketplace-dashboard { padding: 0 12px; }
+  .cp-marketplace-dashboard h1 { font-size: 1.6rem; }
+}

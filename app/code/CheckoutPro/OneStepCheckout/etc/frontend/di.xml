@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Controller\Index\Index">
+        <plugin name="checkoutpro_onestepcheckout_redirect_default_checkout" type="CheckoutPro\OneStepCheckout\Plugin\Checkout\Controller\Index\RedirectToOneStepCheckout" sortOrder="10"/>
+    </type>
+</config>
